@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    font-size: 14px;
 }
 
 :root {
@@ -21,13 +22,13 @@ body {
 
 h1 {
     font-family: 'Fraunces', serif;
-    font-size: 35px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
 p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     color: var(--neutral_grayishBlue);
 }
 
@@ -40,23 +41,19 @@ main {
 }
 
 .main_container {
-    width: 600px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    width: 40rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
     background-color: white;
-    border-radius: 10px;
+    border-radius: 0.714rem;
     overflow: hidden;
 }
 
-.img_container {
-    width: 600px;
-    height: 500px;
-    background-image: url(./images/image-product-desktop.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+picture > img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .text_container {
@@ -67,13 +64,13 @@ main {
 .text_wrapper {
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0px 1.429rem;
     justify-content: space-evenly;
     height: 100%;
 }
 
 .line-spacing {
-    letter-spacing: 5px;
+    letter-spacing: 0.357rem;
 }
 
 .green-btn {
@@ -82,20 +79,20 @@ main {
     color: white;
     display: flex;
     justify-content: center;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 1.071rem;
+    border-radius: 0.571rem;
     gap: 0 .8rem;
 }
 
 .align-mid {
     display: flex;
     align-items: center;
-    gap: 0 15px;
+    gap: 0 1.071rem;
 }
 
 .green-text {
     font-family: 'Fraunces', serif;
-    font-size: 25px;
+    font-size: 1.786rem;
     font-weight: 700;
     color: var(--green);
 }
@@ -105,17 +102,28 @@ main {
     color: var(--neutral_grayishBlue);
 }
 
+.sr-only {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     h1 {
         font-family: 'Fraunces', serif;
-        font-size: 30px;
+        font-size: 2.143rem;
         font-weight: 700;
     }
     
     p {
         font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
+        font-size: 1.143rem;
         color: var(--neutral_grayishBlue);
     }
     
@@ -125,7 +133,7 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: 1.429rem;
     }
     
     .main_container {
@@ -136,21 +144,10 @@ main {
         align-items: center;
         justify-content: center;
         background-color: white;
-        border-radius: 10px;
+        border-radius: 0.714rem;
         overflow: hidden;
     }
-    
-    .img_container {
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        background-image: url(./images/image-product-mobile.jpg);
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-        width: 100%;
-    }
-    
+
     .text_container {
         height: 100%;
         width: 100%;
@@ -160,12 +157,12 @@ main {
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: 0px 20px;
+        padding: 0px 1.429rem;
         justify-content: space-evenly;
     }
     
     .line-spacing {
-        letter-spacing: 5px;
+        letter-spacing: 0.357rem;
     }
     
     .mobile-img {
@@ -184,20 +181,20 @@ main {
         color: white;
         display: flex;
         justify-content: center;
-        padding: 15px;
-        border-radius: 8px;
+        padding: 1.071rem;
+        border-radius: 0.571rem;
         gap: 0 .8rem;
     }
     
     .align-mid {
         display: flex;
         align-items: center;
-        gap: 0 15px;
+        gap: 0 1.071rem;
     }
     
     .green-text {
         font-family: 'Fraunces', serif;
-        font-size: 25px;
+        font-size: 1.786rem;
         font-weight: 700;
         color: var(--green);
     }
