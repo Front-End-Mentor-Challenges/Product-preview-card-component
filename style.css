@@ -40,7 +40,7 @@ main {
 }
 
 .main_container {
-    width: 500px;
+    width: 600px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -69,6 +69,7 @@ main {
     flex-direction: column;
     padding: 0px 20px;
     justify-content: space-evenly;
+    height: 100%;
 }
 
 .line-spacing {
